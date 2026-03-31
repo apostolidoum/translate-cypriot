@@ -17,8 +17,8 @@ test_df = df[train_size:]
 
 def create_ds(df):
     ds = []
-    entry = {}
     for _, row in df.iterrows():
+        entry = {}
         entry["instruction"] = "Translate the sentence into cypriot greek."
         entry["input"] = row["SMG_sentence"]
         entry["output"] = row["CG_sentence_normalized"]
